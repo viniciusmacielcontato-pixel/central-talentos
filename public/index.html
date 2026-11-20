@@ -4,6 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Talentos MN">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="application-name" content="Talentos MN">
+<meta name="theme-color" content="#121113">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <title>Central de Talentos Maciel Navas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -263,6 +272,44 @@ body.sdr .gestor-only{display:none!important}
 .gate label{font-weight:700;font-size:14px;display:block;margin-bottom:6px;color:#D9D4DA}
 .gate .f{background:#121113;border-color:#3A353C;color:#fff}
 .gerr{color:#FF8A95;font-weight:600;font-size:14px;min-height:0}
+.intro{position:fixed;inset:0;z-index:85;background:radial-gradient(1100px 600px at 80% -10%,rgba(212,175,90,.25),transparent 60%),radial-gradient(800px 500px at -10% 110%,rgba(192,22,42,.28),transparent 60%),var(--ink);color:#F1EDE6;display:flex;flex-direction:column;padding:calc(28px + var(--safe-t)) 28px calc(28px + var(--safe-b));overflow:auto}
+.intro.hide{display:none}
+.intro-top{display:flex;align-items:center;gap:12px}
+.intro-top .mono{width:44px;height:44px;border-radius:12px;background:linear-gradient(145deg,#2b2620,#121113);border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--display);font-weight:800;color:var(--gold);font-variation-settings:"wdth" 110}
+.intro-top .skip{margin-left:auto}
+.dots{display:flex;gap:8px;margin-left:16px}
+.dots i{width:28px;height:4px;border-radius:4px;background:#3A353C;transition:background .3s}
+.dots i.on{background:var(--gold)}
+.istage{flex:1;display:grid;place-items:center;padding:24px 0}
+.istep{display:none;width:min(820px,100%);animation:rise .55s cubic-bezier(.2,.8,.2,1)}
+.istep.on{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.ieyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.ititle{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 118;font-size:clamp(40px,7vw,78px);line-height:1;letter-spacing:-.01em;margin:12px 0 14px;text-wrap:balance}
+.ititle span{color:#FF4A5C}
+.ilead{font-size:clamp(17px,2.2vw,21px);color:#C9C3CA;max-width:60ch}
+.igoals{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.igoal{background:#1A181B;border:1px solid #3A353C;border-radius:18px;padding:18px}
+.igoal .n{font-family:var(--display);font-variation-settings:"wdth" 125;font-weight:900;font-size:52px;line-height:1;color:#fff}
+.igoal .n small{font-size:20px;color:#8E8990;font-weight:700}
+.igoal .l{font-weight:700;margin-top:6px}
+.igoal .h{color:#A9A3AA;font-size:14px;margin-top:2px}
+.igoal .bar{height:6px;border-radius:6px;background:#2A272B;margin-top:12px;overflow:hidden}
+.igoal .bar i{display:block;height:100%;background:var(--gold);border-radius:6px}
+.igoal:first-child .bar i{background:var(--red)}
+.iquote{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 108;font-size:clamp(30px,4.6vw,52px);line-height:1.12;text-wrap:balance;margin:16px 0 18px;position:relative;padding-left:22px;border-left:4px solid var(--gold)}
+.ifoot{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.ifoot .btn{min-height:54px;padding:0 24px;font-size:17px}
+.ihint{color:#8E8990;font-size:14px}
+@media (max-width:640px){.igoals{grid-template-columns:1fr}.igoal .n{font-size:44px}}
+.meta-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:4px 20px 20px}
+.mcard{border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--stone)}
+.mcard .n{font-family:var(--display);font-variation-settings:"wdth" 125;font-weight:800;font-size:26px;line-height:1}
+.mcard .n small{font-size:14px;color:var(--mut)}
+.mcard .l{font-size:13px;font-weight:700;color:var(--mut);margin-top:4px}
+.mcard .bar{height:5px;border-radius:5px;background:var(--line);margin-top:8px;overflow:hidden}
+.mcard .bar i{display:block;height:100%;background:var(--gold)}
+.mcard.done{border-color:var(--gold);background:var(--gold-soft)}
 .toast{position:fixed;left:50%;bottom:calc(100px + var(--safe-b));transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:12px 18px;border-radius:14px;font-weight:700;z-index:60;opacity:0;transition:.2s;pointer-events:none;border:1px solid var(--gold)}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -328,6 +375,10 @@ body.sdr .gestor-only{display:none!important}
           </div>
           <div>
             <div class="panel">
+              <div class="ph"><h2>Meta de hoje</h2><div class="right"><button class="btn ghost sm" data-intro>Ver abertura</button></div></div>
+              <div class="meta-row" id="metarow"></div>
+            </div>
+            <div class="panel">
               <div class="ph"><h2>Agenda de conversas</h2></div>
               <div class="slots" id="slots"></div>
             </div>
@@ -389,6 +440,14 @@ body.sdr .gestor-only{display:none!important}
           </div>
           <div>
             <div class="panel gestor-only">
+              <div class="ph"><h2>Meta diária da SDR</h2><div class="right"><button class="btn red sm" id="savemetas">Salvar</button></div></div>
+              <div style="padding:0 20px 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+                <div><label for="m-contatos" style="font-weight:700;font-size:14px">Novos contatos</label><input class="f" id="m-contatos" type="number" min="0" max="500"></div>
+                <div><label for="m-respostas" style="font-weight:700;font-size:14px">Respostas trabalhadas</label><input class="f" id="m-respostas" type="number" min="0" max="500"></div>
+                <div><label for="m-agendados" style="font-weight:700;font-size:14px">Conversas agendadas</label><input class="f" id="m-agendados" type="number" min="0" max="100"></div>
+              </div>
+            </div>
+            <div class="panel gestor-only">
               <div class="ph"><h2>Importar candidatos</h2></div>
               <div style="padding:0 20px 20px">
                 <p style="margin:0 0 12px;color:var(--mut)">Cole a lista exportada do painel antigo. Quem já existe é atualizado sem perder o histórico.</p>
@@ -416,6 +475,30 @@ body.sdr .gestor-only{display:none!important}
   <button class="tab ai" data-go="assistente"><svg><use href="#i-spark"/></svg>IA</button>
   <button class="tab" data-go="mais"><svg><use href="#i-more"/></svg>Mais</button>
 </nav>
+
+<!-- ABERTURA -->
+<div class="intro hide" id="intro" role="dialog" aria-label="Abertura do dia">
+  <div class="intro-top"><div class="mono">MN</div><div class="dots" id="idots"><i class="on"></i><i></i><i></i></div><button class="btn line-d sm skip" id="iskip">Pular</button></div>
+  <div class="istage">
+    <section class="istep on" data-step="0">
+      <div class="ieyebrow" id="i0date"></div>
+      <div class="ititle" id="i0title">Bem-vindo</div>
+      <p class="ilead" id="i0lead"></p>
+    </section>
+    <section class="istep" data-step="1">
+      <div class="ieyebrow">Meta do dia</div>
+      <div class="ititle" id="i1title">Seu jogo de hoje</div>
+      <p class="ilead" id="i1lead"></p>
+      <div class="igoals" id="igoals"></div>
+    </section>
+    <section class="istep" data-step="2">
+      <div class="ieyebrow">Para começar bem</div>
+      <div class="iquote" id="iquote"></div>
+      <p class="ilead" id="i2lead"></p>
+    </section>
+  </div>
+  <div class="ifoot"><button class="btn gold" id="inext">Continuar</button><span class="ihint" id="ihint">Toque para avançar</span></div>
+</div>
 
 <!-- LOGIN -->
 <div class="gate" id="gate">
@@ -559,6 +642,7 @@ function render(){
   // Kanban
   $('#kanban').innerHTML=STAGES.filter(([k])=>k!=='novo').map(([k,l])=>{const xs=A.filter(c=>c.stage===k).sort((a,b)=>String(b.updatedAt||'').localeCompare(String(a.updatedAt||'')));return `<div class="col"><h3><span class="pill st-${k}">${l}</span><span class="c num">${xs.length}</span></h3>${xs.slice(0,80).map(c=>`<div class="kc ${tier(c.score)}" data-open="${esc(c.id)}"><div class="nm">${esc(c.name)}</div><div class="meta">${c.booking?esc(c.booking.label):esc(c.city||'')}${c.lastContact?' · '+ago(c.lastContact):''}</div></div>`).join('')||'<div style="color:var(--mut);font-size:14px;padding:6px">Vazio</div>'}</div>`;}).join('');
   renderCards();
+  if($('#metarow'))renderMetas();
   // Saudação
   const h=new Date().getHours();$('#greet').textContent=(h<12?'Bom dia':h<18?'Boa tarde':'Boa noite')+(ME?', '+first(ME.name||ME.email):'');
   $('#today').textContent=new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
@@ -713,8 +797,9 @@ async function brief(btn){
 /* ================= Eventos ================= */
 function go(v){view=v;$$('[data-go]').forEach(b=>b.classList.toggle('on',b.dataset.go===v&&(b.classList.contains('navi')||b.classList.contains('tab'))));$$('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));if(location.hash!=='#'+v)history.replaceState(null,'','#'+v);window.scrollTo({top:0});if(v==='assistente')setTimeout(()=>$('#ask').focus(),200);}
 document.addEventListener('click',e=>{
-  const t=e.target.closest('[data-logout],[data-refresh],[data-go],[data-open],[data-sent],[data-stage],[data-book],[data-unbook],[data-att],[data-note],[data-copy],[data-copytxt],[data-mark],[data-chip],[data-setst],[data-ai-prof],[data-ai-reply],[data-apply],#close,#scrim,#morebtn,#t-near,#t-high,#briefbtn,.sugg button');
+  const t=e.target.closest('[data-intro],[data-logout],[data-refresh],[data-go],[data-open],[data-sent],[data-stage],[data-book],[data-unbook],[data-att],[data-note],[data-copy],[data-copytxt],[data-mark],[data-chip],[data-setst],[data-ai-prof],[data-ai-reply],[data-apply],#close,#scrim,#morebtn,#t-near,#t-high,#briefbtn,.sugg button');
   if(!t)return;
+  if(t.dataset.intro!==undefined){e.preventDefault();showIntro();return;}
   if(t.dataset.logout!==undefined){e.preventDefault();logout();return;}
   if(t.dataset.refresh!==undefined){e.preventDefault();loadAll().catch(err=>toast(err.message));return;}
   if(t.dataset.sent!==undefined&&t.dataset.sent){ if(canWrite) act.sent(t.dataset.sent,t.dataset.k); return; }
@@ -753,7 +838,7 @@ window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(['ho
 
 /* ================= Mensagens ================= */
 function renderTpl(){$('#tpls').innerHTML=Object.keys(DEF).map(k=>`<div class="tpl"><label for="tpl-${k}">${TL[k]}</label><textarea class="f" id="tpl-${k}" data-tpl="${k}">${esc(tpl[k])}</textarea></div>`).join('');}
-$('#savetpl').addEventListener('click',async()=>{$$('[data-tpl]').forEach(t=>tpl[t.dataset.tpl]=t.value.trim()||DEF[t.dataset.tpl]);if(/contempla/i.test(Object.values(tpl).join(' ')))toast('Atenção: não fale em contemplação');try{await api('config',{method:'PUT',body:JSON.stringify({config:{mensagens:{...tpl}}})});toast('Mensagens salvas para toda a equipe');}catch(e){toast(e.message);}render();});
+$('#savetpl').addEventListener('click',async()=>{$$('[data-tpl]').forEach(t=>tpl[t.dataset.tpl]=t.value.trim()||DEF[t.dataset.tpl]);if(/contempla/i.test(Object.values(tpl).join(' ')))toast('Atenção: não fale em contemplação');try{await saveConfig();toast('Mensagens salvas para toda a equipe');}catch(e){toast(e.message);}render();});
 
 /* ================= Importar / exportar ================= */
 function mapStage(s,m,b,at){if(at)return'compareceu';if(b||/confirmad/i.test(s))return'agendado';if(/tem interesse/i.test(s))return'interessado';if(/sem interesse|inv[aá]lido/i.test(s))return'descartado';if(/n[aã]o atendeu|retornar|preferiu/i.test(s))return'retornar';if(m>0)return'aguardando';return'novo';}
@@ -781,6 +866,86 @@ $('#impbtn').addEventListener('click',()=>{if(!canWrite){toast('Acesso somente l
 $('#impfile').addEventListener('change',async e=>{const f=e.target.files[0];if(f)doImport(await f.text());});
 $('#expbtn').addEventListener('click',()=>{const q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';copy([['Nota','Nome','Telefone','Cidade','Etapa','Agendamento','Último contato','Experiência'].join(';'),...all().sort((a,b)=>b.score-a.score).map(c=>[c.score,c.name,fone(c.phone),c.city,SL[c.stage],c.booking?c.booking.label:'',c.lastContact?when(c.lastContact):'',(c.exp||'').slice(0,200)].map(q).join(';'))].join('\n'));});
 
+/* ================= Meta do dia e abertura ================= */
+const META_DEF={contatos:20,respostas:5,agendados:2};
+let metas={...META_DEF};
+const sameDay=(iso,d=new Date())=>{if(!iso)return false;const x=new Date(iso);return x.getFullYear()===d.getFullYear()&&x.getMonth()===d.getMonth()&&x.getDate()===d.getDate();};
+function todayProgress(){
+  let contatos=0,respostas=0,agendados=0;
+  all().forEach(c=>(c.history||[]).forEach(h=>{if(!sameDay(h.at))return;
+    if(h.kind==='WhatsApp'&&/Primeiro contato/.test(h.text))contatos++;
+    if(h.kind==='resposta do candidato'||(h.kind==='etapa'&&/→ (Interessado|Descartado)/.test(h.text)))respostas++;
+    if(h.kind==='etapa'&&/→ Agendado/.test(h.text))agendados++;}));
+  return{contatos,respostas,agendados};
+}
+function renderMetas(){
+  const p=todayProgress();
+  const items=[['contatos','Novos contatos'],['respostas','Respostas trabalhadas'],['agendados','Conversas agendadas']];
+  $('#metarow').innerHTML=items.map(([k,l])=>{const goal=+metas[k]||0,v=p[k],pc=goal?Math.min(100,v/goal*100):0;return `<div class="mcard ${goal&&v>=goal?'done':''}"><div class="n">${v}<small> / ${goal}</small></div><div class="l">${l}</div><div class="bar"><i style="width:${pc}%"></i></div></div>`;}).join('');
+  ['contatos','respostas','agendados'].forEach(k=>{const el=$('#m-'+k);if(el&&document.activeElement!==el)el.value=metas[k];});
+}
+// Frases próprias da Maciel Navas, uma por dia (a mesma para toda a equipe).
+const FRASES=[
+  ['Cada "alô" de hoje pode ser o próximo grande consultor da equipe.','Quem chama mais, escolhe melhor.'],
+  ['Constância vence talento quando o talento não aparece.','Faça hoje o básico muito bem feito.'],
+  ['Uma conversa boa muda a semana de alguém. Hoje pode ser a sua.','Escute antes de apresentar.'],
+  ['O "não" de hoje abre espaço para o "sim" certo.','Siga para o próximo nome sem perder o ritmo.'],
+  ['Equipe forte começa num primeiro contato bem feito.','Seja breve, gentil e claro.'],
+  ['Ninguém constrói uma carreira sozinho. Você está abrindo portas.','Cada agendamento é uma porta aberta.'],
+  ['Disciplina é fazer o que precisa ser feito, mesmo sem vontade.','Comece pelos interessados.'],
+  ['Pessoas certas no lugar certo transformam resultados.','Procure brilho no olho, não só currículo.'],
+  ['Pequenas metas cumpridas todo dia viram grandes números no mês.','Bata a meta de contatos antes do almoço.'],
+  ['Seu tom de voz é o primeiro cartão de visitas da Ademicon.','Sorria ao digitar. Faz diferença.'],
+  ['Follow-up não é insistência. É compromisso com quem demonstrou interesse.','Cobre quem ficou parado há dois dias.'],
+  ['O sucesso da equipe começa na agenda que você monta hoje.','Ofereça os três horários com segurança.'],
+  ['Energia gera energia. Comece o dia com a primeira mensagem.','Dez contatos na primeira hora.'],
+  ['Talento existe em todo lugar. O seu trabalho é encontrar.','Olhe com atenção os perfis de Osasco, Barueri e região.'],
+  ['Você não vende uma vaga. Você apresenta um novo caminho.','Fale de crescimento, treinamento e acompanhamento.'],
+  ['Hoje é dia de plantar. A colheita vem com constância.','Registre tudo na Central.'],
+  ['Quem organiza o dia, domina o resultado.','Siga a ordem da tela Hoje.'],
+  ['Uma boa pergunta vale mais que um bom discurso.','Pergunte o que a pessoa busca hoje.'],
+  ['Cada candidato é uma história. Trate com respeito e atenção.','Responda no mesmo dia.'],
+  ['Grandes equipes nascem de conversas simples.','Convide para conhecer o escritório.'],
+  ['O resultado de amanhã é a soma dos contatos de hoje.','Mantenha a fila andando.'],
+  ['Seja a pessoa que você gostaria de encontrar numa entrevista.','Pontualidade e cordialidade sempre.'],
+  ['Foco no processo. O número vem como consequência.','Abordar, responder, agendar, confirmar.'],
+  ['Persistência educada abre portas que pareciam fechadas.','Mais uma tentativa com quem não respondeu.'],
+  ['Você é o primeiro passo da jornada de alguém na Ademicon.','Faça esse passo valer a pena.'],
+  ['Clareza gera confiança. Confiança gera presença.','Confirme dia, hora e endereço.'],
+  ['Hoje alguém está esperando exatamente essa oportunidade.','Vá encontrar essa pessoa.'],
+  ['Meta dada é meta batida, um contato de cada vez.','Comemore cada agendamento.'],
+  ['Atitude é o que transforma uma lista em uma equipe.','Comece agora.'],
+  ['Seu trabalho de hoje constrói a equipe de amanhã.','Bom dia de conquistas.']
+];
+function dayIndex(){const d=new Date();return Math.floor((d-new Date(d.getFullYear(),0,0))/864e5);}
+let istep=0;
+function introKey(){return 'mn_intro_'+(ME&&ME.email||'')+'_'+new Date().toDateString();}
+function showIntro(){
+  if(!ME)return;
+  const nm=first(ME.name||ME.email), h=new Date().getHours(), sauda=h<12?'Bom dia':h<18?'Boa tarde':'Boa noite';
+  const ct=counts(), p=todayProgress();
+  const it=all().filter(c=>c.stage==='interessado').length, ag=all().filter(c=>c.booking&&new Date(c.booking.iso)>new Date()).length;
+  $('#i0date').textContent=new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
+  $('#i0title').innerHTML=`${sauda},<br><span>${esc(nm)}</span>.`;
+  $('#i0lead').textContent=`Bem-vindo(a) à Central de Talentos Maciel Navas. ${it?`Você tem ${it} interessado(s) esperando resposta`:'Ninguém está esperando resposta agora'}${ag?` e ${ag} conversa(s) agendada(s) nos próximos dias.`:'.'}`;
+  const goals=[['contatos','Novos contatos','primeiras mensagens no WhatsApp'],['respostas','Respostas trabalhadas','candidatos que responderam'],['agendados','Conversas agendadas','ter 19h · qui 19h · sáb 9h']];
+  const fila=all().filter(c=>c.stage==='novo'&&c.phone).length;
+  $('#i1lead').textContent=fila?`A fila tem ${fila} perfis prontos para chamar, já ordenados pela nota.`:'A fila de novos está vazia. Peça ao gestor uma nova lista.';
+  $('#igoals').innerHTML=goals.map(([k,l,hh])=>{const g=+metas[k]||0,v=p[k],pc=g?Math.min(100,v/g*100):0;return `<div class="igoal"><div class="n">${g}${v?`<small> · ${v} feitos</small>`:''}</div><div class="l">${l}</div><div class="h">${hh}</div><div class="bar"><i style="width:${pc}%"></i></div></div>`;}).join('');
+  const [f,dica]=FRASES[dayIndex()%FRASES.length];
+  $('#iquote').textContent=f;
+  $('#i2lead').textContent='Dica de hoje: '+dica;
+  istep=0;setIntroStep(0);$('#intro').classList.remove('hide');setTimeout(()=>$('#inext').focus(),100);
+}
+function setIntroStep(n){istep=n;$$('.istep').forEach(s=>s.classList.toggle('on',+s.dataset.step===n));$$('#idots i').forEach((d,i)=>d.classList.toggle('on',i<=n));$('#inext').textContent=n===2?'Começar o dia':'Continuar';$('#ihint').textContent=n===2?'':'Toque para avançar';}
+function closeIntro(){$('#intro').classList.add('hide');try{localStorage.setItem(introKey(),'1');}catch{}go('hoje');}
+$('#inext').addEventListener('click',e=>{e.stopPropagation();istep<2?setIntroStep(istep+1):closeIntro();});
+$('#iskip').addEventListener('click',e=>{e.stopPropagation();closeIntro();});
+$('#intro').addEventListener('click',e=>{if(e.target.closest('button'))return;istep<2?setIntroStep(istep+1):closeIntro();});
+document.addEventListener('keydown',e=>{if($('#intro').classList.contains('hide'))return;if(e.key==='Enter'||e.key===' '||e.key==='ArrowRight'){e.preventDefault();istep<2?setIntroStep(istep+1):closeIntro();}else if(e.key==='ArrowLeft'&&istep>0)setIntroStep(istep-1);else if(e.key==='Escape')closeIntro();});
+async function saveConfig(){await api('config',{method:'PUT',body:JSON.stringify({config:{mensagens:{...tpl},metas:{...metas}}})});}
+$('#savemetas').addEventListener('click',async()=>{['contatos','respostas','agendados'].forEach(k=>{const v=parseInt($('#m-'+k).value,10);metas[k]=isNaN(v)?META_DEF[k]:Math.max(0,v);});try{await saveConfig();toast('Meta salva para a equipe');}catch(e){toast(e.message);}renderMetas();});
+
 /* ================= Login ================= */
 let gateMode='login', gateToken=null;
 function showGate(mode,tok){
@@ -803,7 +968,7 @@ $('#gform').addEventListener('submit',async e=>{
     else if(gateMode==='invite'){storeSession(await idp('/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({token:gateToken,type:'signup',password:pw})}));}
     else if(gateMode==='recovery'){storeSession(await idp('/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({token:gateToken,type:'recovery'})}));await idp('/user',{method:'PUT',headers:{'Content-Type':'application/json',Authorization:'Bearer '+session.access_token},body:JSON.stringify({password:pw})});}
     history.replaceState(null,'',location.pathname);
-    await start();
+    await start(true);
   }catch(err){
     const m=String(err.message||'');
     $('#gerr').textContent=err.status===400&&/invalid|password|grant/i.test(m)?'E-mail ou senha incorretos.':err.status===404?'O login ainda não foi ativado neste site (Netlify Identity).':/expired|invalid token|not found/i.test(m)?'Este link expirou. Peça um novo convite ao gestor.':'Não foi possível entrar: '+m;
@@ -819,6 +984,7 @@ async function loadAll(silent){
   ME=user;people.clear();
   items.forEach(d=>{d.history=[...(d.history||[])];Object.assign(d,scoreOf(d));people.set(d.id,d);});
   if(cfg&&cfg.config&&cfg.config.mensagens)tpl={...DEF,...cfg.config.mensagens};
+  if(cfg&&cfg.config&&cfg.config.metas)metas={...META_DEF,...cfg.config.metas};
   ONLINE=true;sync('ok','Atualizado · '+new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}));
   applyUser();renderTpl();render();
   notice(people.size?'':(isGestor()?'A base está vazia. Abra <b>Mais</b> e importe a lista do painel antigo.':'A base ainda está vazia. Aguarde o gestor importar os candidatos.'));
@@ -830,8 +996,8 @@ function applyUser(){
   $('#meav').textContent=(nm[0]||'?').toUpperCase();$('#menm').textContent=nm;$('#merl').textContent=isGestor()?'Gestor':'SDR';
   document.body.classList.toggle('sdr',!isGestor());
 }
-async function start(){
-  try{await loadAll();$('#gate').classList.add('hide');}
+async function start(fromLogin){
+  try{await loadAll();$('#gate').classList.add('hide');let seen=false;try{seen=!!localStorage.getItem(introKey());}catch{}if(fromLogin||!seen)showIntro();}
   catch(e){
     if(e.status===403){showGate('login');$('#gerr').textContent=e.message;clearSession();}
     else if(e.status===401){showGate('login');}
