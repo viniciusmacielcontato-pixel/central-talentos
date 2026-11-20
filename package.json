@@ -1,0 +1,11 @@
+{
+  "name": "central-talentos-maciel-navas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Central de Talentos Maciel Navas - painel da SDR com login (Netlify Identity), base na nuvem (Netlify Blobs) e IA (Claude).",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@netlify/blobs": "^10.0.0"
+  }
+}
