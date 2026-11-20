@@ -32,7 +32,7 @@ export function requireUser(context, onlyGestor = false) {
 
 export function store(event) {
   connectLambda(event);
-  return getStore({ name: "talentos", consistency: "strong" });
+  return getStore({ name: "talentos" });
 }
 
 export function parseBody(event) {
